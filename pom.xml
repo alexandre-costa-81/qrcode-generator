@@ -12,7 +12,7 @@
 	<artifactId>qrcode-generator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>qrcode-generator</name>
-	<description>API para geração de códigos QR personalizados, com suporte a diferentes formatos de saída (PNG, SVG, PDF) e configuração de dados, tamanho, cores e logotipo. Ideal para integração com sistemas web e mobile.</description>
+	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -28,6 +28,8 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<zxing.version>3.5.2</zxing.version>
+		<aws.version>2.24.12</aws.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -45,6 +47,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>software.amazon.awssdk</groupId>
+			<artifactId>s3</artifactId>
+			<version>${aws.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>core</artifactId>
+			<version>${zxing.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.zxing</groupId>
+			<artifactId>javase</artifactId>
+			<version>${zxing.version}</version>
 		</dependency>
 	</dependencies>
 
