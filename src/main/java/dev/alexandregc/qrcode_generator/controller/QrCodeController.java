@@ -1,11 +1,11 @@
-package controller;
+package dev.alexandregc.qrcode_generator.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import dto.QrCodeGenerateRequest;
-import dto.QrCodeGenerateResponse;
-import service.QrCodeGeneratorService;
+import dev.alexandregc.qrcode_generator.dto.QrCodeGenerateRequest;
+import dev.alexandregc.qrcode_generator.dto.QrCodeGenerateResponse;
+import dev.alexandregc.qrcode_generator.service.QrCodeGeneratorService;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,6 +28,7 @@ public class QrCodeController {
 
             return ResponseEntity.ok(response);
         } catch (Exception e) {
+            System.out.println("Error generating QR code: " + e.getMessage());
             return ResponseEntity.internalServerError().build();
         }
     }

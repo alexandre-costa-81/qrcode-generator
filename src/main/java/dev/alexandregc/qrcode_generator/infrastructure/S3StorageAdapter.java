@@ -1,9 +1,9 @@
-package infrastructure;
+package dev.alexandregc.qrcode_generator.infrastructure;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import ports.StoragePort;
+import dev.alexandregc.qrcode_generator.ports.StoragePort;
 import software.amazon.awssdk.core.sync.RequestBody;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
